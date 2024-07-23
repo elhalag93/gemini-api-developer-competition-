@@ -8,4 +8,4 @@
 
 ### then access http://127.0.0.1:5000
 
-### upload soil image the you will be redirected to recommended plants you can grow 
+### upload soil image then you will be redirected to recommended plants you can grow to help our planet
