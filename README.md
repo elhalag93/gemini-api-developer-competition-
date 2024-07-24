@@ -6,7 +6,7 @@
 
 ## to get flask app
 
-### run below docker image 
+### - run below docker image 
 
 docker run -p 5000:5000 docker.io/elhalag93/gemeini-plant-recommendation
 
@@ -15,7 +15,7 @@ docker run -p 5000:5000 docker.io/elhalag93/gemeini-plant-recommendation
 ### upload soil image then you will be redirected to recommended plants you can grow to help our planet
 
 
-### or  you can clone  the repo and run the flask app
+### - or  you can clone  the repo and run the flask app
 
 git clone https://github.com/elhalag93/gemini-api-developer-competition-
 
