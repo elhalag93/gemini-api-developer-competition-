@@ -9,3 +9,16 @@
 ### then access http://127.0.0.1:5000
 
 ### upload soil image then you will be redirected to recommended plants you can grow to help our planet
+
+
+### also you can clone  the repo and run the flask app
+
+git clone https://github.com/elhalag93/gemini-api-developer-competition-
+
+python app.py
+
+### then access http://127.0.0.1:5000
+
+### upload soil image then you will be redirected to recommended plants you can grow to help our planet
+
+
