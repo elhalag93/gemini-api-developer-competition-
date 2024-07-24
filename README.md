@@ -18,11 +18,9 @@ docker run -p 5000:5000 docker.io/elhalag93/gemeini-plant-recommendation
 ### - or  you can clone  the repo and run the flask app
 ```sh
 git clone https://github.com/elhalag93/gemini-api-developer-competition-
-```
-```sh
+
 pip3.9 install Flask requests google-generativeai grpcio
-```
-```sh
+
 python3.9 app.py
 ```
 ### then access http://127.0.0.1:5000
