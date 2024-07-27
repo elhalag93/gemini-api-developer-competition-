@@ -15,7 +15,7 @@
     }
     .container {
       max-width: 800px;
-      margin: 0 auto;
+      margin: 20px auto;
       padding: 20px;
       background: #ffffff;
       border-radius: 8px;
@@ -48,7 +48,13 @@
     strong {
       color: #2c6b2f; /* Dark green */
     }
+    .chart-container {
+      width: 100%;
+      height: 400px;
+      margin-top: 20px;
+    }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="container">
@@ -76,7 +82,41 @@
         </li>
       {% endfor %}
     </ul>
+    <div class="chart-container">
+      <canvas id="carbonChart"></canvas>
+    </div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const plantNames = {{ recommended_plants | map(attribute='name') | list | tojson }};
+      const carbonRates = {{ recommended_plants | map(attribute='carbon_absorption_rate') | list | tojson }};
+      
+      // Convert carbonRates to numbers
+      const carbonRatesNumeric = carbonRates.map(rate => parseFloat(rate) || 0);
+
+      const ctx = document.getElementById('carbonChart').getContext('2d');
+      const chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: plantNames,
+          datasets: [{
+            label: 'Carbon Absorption Rate',
+            data: carbonRatesNumeric,
+            backgroundColor: 'rgba(44, 107, 47, 0.7)',
+            borderColor: 'rgba(44, 107, 47, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
-
