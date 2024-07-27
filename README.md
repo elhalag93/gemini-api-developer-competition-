@@ -19,6 +19,8 @@ docker run -p 5000:5000 docker.io/elhalag93/gemeini-plant-recommendation
 ```sh
 git clone https://github.com/elhalag93/gemini-api-developer-competition-
 
+cd gemini-api-developer-competition-
+
 pip3.9 install Flask requests google-generativeai grpcio
 
 python3.9 app.py
