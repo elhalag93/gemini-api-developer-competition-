@@ -10,7 +10,7 @@
 ```sh
 docker run -p 5000:5000 docker.io/elhalag93/gemeini-plant-recommendation
 ```
-### then access http://127.0.0.1:5000
+### then access http://127.0.0.1:5000  or http://<machine_ip>:5000
 
 ### upload soil image then you will be redirected to recommended plants you can grow to help our planet
 
@@ -25,9 +25,7 @@ pip3.9 install Flask requests google-generativeai grpcio
 
 python3.9 app.py
 ```
-### then access http://127.0.0.1:5000
-###        or 
-### access http://<machine_ip>:5000
+### - then access http://127.0.0.1:5000  or http://<machine_ip>:5000
 
 ### - upload soil image then you will be redirected to recommended plants you can grow to help our planet
 
